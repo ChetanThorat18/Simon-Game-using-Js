@@ -11,7 +11,7 @@ let btns = ["red", "green", "blue", "yellow"]; // Use class names without dots
 
 // step 1: If any key is pressed then Start the game
 // step 2: increase the level and Flash any random btn
-document.addEventListener("keypress", startGame);
+document.addEventListener("click", startGame);
 document.addEventListener("touchstart", startGame);
 function startGame() {
   if (start == false) {
