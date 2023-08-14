@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background-color: #F9F5F6; */
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0,0.5 );
+    transition: transform 0.3s ease;
+}
+
+.simon-container h1,h3{
+    text-align: center;
+}
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 300px;
+    height: 300px;
+    gap: 20px;
+}
+
+.red{
+    background-color: #D21312;
+}
+.green{
+    background-color: #54e311;
+}
+.blue{
+    background-color: #4477CE;
+}
+.yellow{
+    background-color: #FFD700;
+}
+
+
+.flash {
+    animation: flashAnimation 0.5s alternate infinite;
+}
+
+@keyframes flashAnimation {
+    from {
+        background-color: #fff;
+        transform: scale(1);
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes flashBody {
+    0%, 100% {
+        background-color: #FF0000; 
+    }
+    50% {
+        background-color: #F9F5F6; 
+    }
+}
+
+.body-game-over {
+    background-color: #FF0000; 
+    color: white;
+    animation: flashBody 0.4s infinite;
+}
+#highest-score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #000; 
+}
