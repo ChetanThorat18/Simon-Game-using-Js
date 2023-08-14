@@ -56,7 +56,7 @@ function checkSequence(ind) {
     }
     }
   } else {
-    h3.innerHTML = `Game Over! Your score was <b>${level}</b><br> Press any key to start again `;
+    h3.innerHTML = `Game Over! Your score was <b>${level}</b><br> click anywhere to start again `;
 
     document.body.classList.add("body-game-over"); // Apply the red background color
     // Remove the red background color after a delay
